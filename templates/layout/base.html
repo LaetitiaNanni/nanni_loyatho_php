@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}{% endblock %} - saucissons</title>
+	<link rel="stylesheet" type="text/css" href="../{{ASSETS_PATH}}css/boilerplate.css">
+	<link rel="stylesheet" type="text/css" href="../{{ASSETS_PATH}}css/fontface.css">
+	<link rel="stylesheet" type="text/css" href="../{{ASSETS_PATH}}css/style.css">
+</head>
+<body>
+	{% include 'layout/header.html' %}	
+	{% block content %}{% endblock %}
+	{% block footer %}{% endblock %}
+</body>
+</html>
+

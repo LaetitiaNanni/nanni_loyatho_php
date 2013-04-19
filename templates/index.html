@@ -1,0 +1,16 @@
+{% extends "layout/base.html" %}
+{% block title %} Recherche {% endblock %}
+{% block content %}
+	
+	Du contenu !
+	<h1>YOUPI</h1>
+	{% if plats %}
+		<ul>
+		{% for plat in plats %}
+			<li>{{ plat.nom }}</li>
+		{% endfor %}
+		</ul>
+	{% else %}
+		<p>Pas de plats.</p>
+	{% endif %}
+{% endblock %}
