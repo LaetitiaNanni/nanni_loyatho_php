@@ -1,0 +1,22 @@
+<div id="login" class="column">
+	{# affichage du tableau d'erreurs s'il existe #}
+	{% if taberrors_login is defined %}
+		<ul class="errors">
+			{% for error in taberrors_login %}
+				<li>{{ error }}</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+	{% if msg_connexion_login is defined %}
+		<ul class="errors">
+				<li>{{ msg_connexion_login }}</li>
+		</ul>
+	{% endif %}
+	<form method="post" action="">
+		<p>Nom</p>
+		<input type="text" name="pseudoConnexion" placeholder="Entrer un nom..."/> 
+		<p>Password</p>
+		<input type="password" name="passwordConnexion" />
+		<input type="submit" name="connexion" value="Connexion"/>
+	</form>
+</div>

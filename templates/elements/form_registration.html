@@ -1,0 +1,52 @@
+<div id="registration" class="column">
+	{# affichage du tableau d'erreurs s'il existe #}
+	{% if taberrors_registration is defined %}
+		<ul class="errors">
+			{% for error in taberrors_registration %}
+				<li>{{ error }}</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+	{% if msg_connexion_registration is defined %}
+		<ul class="errors">
+				<li>{{ msg_connexion_registration }}</li>
+		</ul>
+	{% endif %}
+
+	{# formulaire d'inscription #}
+	<form method="post" action="">
+
+		<ul>
+			<li>
+				<label for="firstNameRegistration">Prenom :</label>
+				<input type="text" name="firstNameRegistration" placeholder="Entrer un nom..."/> 
+			</li>
+			<li>
+				<label for="lastNameRegistration">Nom :</label>
+				<input type="text" name="lastNameRegistration" placeholder="Entrer un nom..."/>
+			</li>
+			<li>
+				<label for="pseudoRegistration">Pseudo :</label>
+				<input type="text" name="pseudoRegistration" placeholder="Entrer un nom..."/>
+			</li>
+			<li>	
+				<label for="pwdRegistration1">Mot de passe :</label>
+				<input type="password" name="pwdRegistration1" />
+			</li>
+			<li>
+				<label for="pwdRegistration2">Confirmation mot de passe :</label>
+				<input type="password" name="pwdRegistration2" />
+			</li>
+			<li>
+				<input type="submit" name="registration" value="Inscription"/>
+			</li>
+
+		</ul>
+
+
+
+		
+		
+	
+	</form>
+</div>

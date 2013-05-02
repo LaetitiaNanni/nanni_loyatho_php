@@ -1,0 +1,41 @@
+	<header>
+		<div class="content">
+			<a class="logo" href="">
+				<img src="../assets/img/logo.png">
+			</a>
+			<div id="search_bar">
+				<form method="post" action="">
+					<input type="text" name="pseudoConnexion" placeholder="trouver un produit..."/> 
+					<input type="submit" name="connexion" value="Rechercher"/>
+				</form>
+			</div>
+			<nav id="main_menu">
+				<ul>
+					<li><a href="">Spécialités</a></li>
+					<li><a href="">Gamme pur porc</a></li>
+					<li><a href="">Lots</a></li>
+				</ul>
+			</nav>
+
+				<nav id="account">	
+
+					<ul>
+						{% if session %}
+						<li><a href="p_accueil.php?logout=1" class="deco">Déconnexion</a></li>
+							{% if session == 2 %}
+							<li><a href="#" class="deco">Espace admin</a></li>
+							{% endif %}
+						{% else %}
+						<li><a href="registration.php">S'inscrire</a></li>
+						<li>
+							<a href="">Se connecter</a>
+							{% include 'elements/form_login.html' %}
+						</li>
+						{% endif %}
+
+					</ul>
+				</nav>			
+			
+		</div>
+	</header>
+

@@ -1,16 +1,51 @@
 {% extends "layout/base.html" %}
-{% block title %} Recherche {% endblock %}
+{% block title %} Accueil {% endblock %}
 {% block content %}
-	
-	Du contenu !
-	<h1>YOUPI</h1>
-	{% if plats %}
+
+	<nav id="second_menu" class="column">
+		<h1>Pur porc</h1>
 		<ul>
-		{% for plat in plats %}
-			<li>{{ plat.nom }}</li>
-		{% endfor %}
+			<li>Saucissons</li>
+			<li>Saucissons</li>
+			<li>Saucissons</li>
+			<li>Saucissons</li>
+			<li>Saucissons</li>
+			<li>Saucissons</li>
+			<li>Saucissons</li>
+			<li>Saucissons</li>
 		</ul>
-	{% else %}
-		<p>Pas de plats.</p>
-	{% endif %}
+	</nav>
+	<section id="products" class="column middle">
+		{% if plats %}
+
+		<ul id="list_products">
+		{% for plat in plats %}
+		
+			<li>
+				<div class="column">
+					<img class="caption" src="content/img/produits/visu-produit.png">
+				</div>
+				<div class="column infos">
+					<h2>{{ plat.nom }}</h2>
+					<p>Saucisson à base de tagadas haribos, sans conservateur ni aromes artificiels</p>
+					<p class="price">
+						<strong>10 €</strong>
+						<a class="column button" href"">Ajouter au panier</a>
+					</p>
+
+				</div>
+				<div class="clear"></div>
+			</li>
+		{% endfor %}
+			 
+
+		</ul>
+		{% else %}
+			<p>Pas de plats.</p>
+		{% endif %}
+	</section>
+	<aside class="column">
+		<h1>Panier</h1>
+		<span>Gestion du panier directement accéssible</span>
+	</aside>	
 {% endblock %}

@@ -13,7 +13,7 @@
     function fetch($sql) {
 		$result = mysql_query($sql);
 		$results = array() ;
-		while ($ligne = mysql_fetch_array($result)) {
+		while ($ligne = mysql_fetch_array($result) or die(mysql_error())) {
 			$results[] = $ligne;
 		}
 		mysql_free_result($result) ;

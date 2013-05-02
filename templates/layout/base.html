@@ -8,9 +8,16 @@
 	<link rel="stylesheet" type="text/css" href="../{{ASSETS_PATH}}css/style.css">
 </head>
 <body>
-	{% include 'layout/header.html' %}	
-	{% block content %}{% endblock %}
+	{% include 'elements/header.html' %}
+	<div id="banner"></div>
+
+	<section class="page">
+		<div class="content">	
+			{% block content %}{% endblock %}
+		</div>
+	</section>
 	{% block footer %}{% endblock %}
+
 </body>
 </html>
 
