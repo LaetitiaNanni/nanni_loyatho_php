@@ -3,6 +3,18 @@
 require_once 'settings.php';
 require_once LIB_PATH . 'db.php';
 
+
+connectDb();
+session_start();
+	$session=0;
+
+	if(isset($_GET["logout"])) {
+		if($_GET["logout"] == 1) {
+			session_destroy();
+			$session=0;
+			header('Location: p_accueil.php'); 
+		}
+	}
 /* Initialisation moteur Twig */
 require_once('lib/Twig/Autoloader.php');
 Twig_Autoloader::register();
